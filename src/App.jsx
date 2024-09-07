@@ -1,16 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Home from './components/home/Home';
+import MatchDetails from './components/match-details/MatchDetails';
+import TeamDetails from './components/team-details/TeamDetails';
+import NotFound from './components/not-found/NotFound';
 
 function App() {
-    const [count, setCount] = useState(0)
 
     return (
         <>
-            <h1>Header</h1>
-            <main>Main</main>
-            <h1>Footer</h1>
+            <Header/ >
+
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />}/>
+                    <Route path="/match" element={<MatchDetails />}/>
+                    <Route path="/team" element={<TeamDetails />}/>
+                    <Route path="/*" element={<NotFound />} />
+                </Routes>
+            </main>
+
+            <Footer />
         </>
     )
 }
