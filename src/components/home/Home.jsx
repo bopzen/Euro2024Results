@@ -1,7 +1,17 @@
+import GroupMatches from "../group-matches/GroupMatches";
+
 export default function Home() {
     return (
         <>
-            <h1>Home</h1>
+            <div className="group-results-container">
+                <GroupMatches />
+                <GroupMatches />
+                <GroupMatches />
+                <GroupMatches />
+                <GroupMatches />
+                <GroupMatches />
+            </div>
+            
         </>
     )
 }
