@@ -241,3 +241,17 @@ footer {
     font-size: 4rem;
     font-weight: 600;
 }
+
+.teams-lineup-section {
+    display: flex;
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+.team-lineup-container {
+    width: 350px;
+    height: 500px;
+    background-color: green;
+    margin-top: 2rem;
+    
+}

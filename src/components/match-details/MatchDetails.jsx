@@ -1,3 +1,5 @@
+import TeamLineUp from "../team-lineup/TeamLineUp";
+
 export default function MatchDetails() {
     return (
         <>
@@ -25,6 +27,10 @@ export default function MatchDetails() {
                     </div>              
                 </div>
                 <h4>Group A</h4>
+                <div className="teams-lineup-section">
+                    <TeamLineUp />
+                    <TeamLineUp />
+                </div>
             </div>
             
             
