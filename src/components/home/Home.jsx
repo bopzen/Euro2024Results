@@ -15,7 +15,7 @@ export default function Home() {
             </div>
             
             <h2>Round of 16</h2>
-            <div className="round-of-16-container">
+            <div className="final-results-container">
                 <MatchResult />
                 <MatchResult />
                 <MatchResult />
@@ -26,22 +26,19 @@ export default function Home() {
                 <MatchResult />
             </div>
             <h2>Quarter-finals</h2>
-            <div className="round-of-16-container">
+            <div className="final-results-container">
                 <MatchResult />
                 <MatchResult />
                 <MatchResult />
                 <MatchResult />
             </div>
             <h2>Semi-finals</h2>
-            <div className="round-of-16-container">
-                <MatchResult />
-                <MatchResult />
+            <div className="final-results-container">
                 <MatchResult />
                 <MatchResult />
             </div>
             <h2>Final</h2>
-            <div className="round-of-16-container">
-                <MatchResult />
+            <div className="final-results-container">
                 <MatchResult />
             </div>
         </>
