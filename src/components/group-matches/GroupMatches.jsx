@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MatchResult from "../match-result/MatchResult";
 
 export default function GroupMatches() {
@@ -6,18 +7,18 @@ export default function GroupMatches() {
             <div className="group-results-card">
                 <h3>Group A</h3>
                 <div className="matches-container">
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
-                    <MatchResult />
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
+                    <Link to="/Match"><MatchResult /></Link>
                 </div>
             </div>
 

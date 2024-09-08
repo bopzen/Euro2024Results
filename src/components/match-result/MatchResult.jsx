@@ -13,17 +13,20 @@ export default function MatchResult() {
                         <div className="country-flag-container">
                             <img src="https://www.worldometers.info/img/flags/sp-flag.gif" alt="" className="country-flag" />
                         </div>
-                        <p>Spain</p>
+                        <p><b>Spain</b></p>
                     </div>              
                 </div>
-                <div className="match-result">
-                    <p>1</p>
-                    <p>2</p>
+                <div className="match-results-right">
+                    <div className="match-result">
+                        <p>1</p>
+                        <p>2</p>
+                    </div>
+                    <div className="match-info">
+                        <p>FT</p>
+                        <p>Jun 14</p>
+                    </div>
                 </div>
-                <div className="match-info">
-                    <p>FT</p>
-                    <p>Jun 14</p>
-                </div>
+
 
 
             </div>
