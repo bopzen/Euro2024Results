@@ -12,8 +12,8 @@ export default function Header() {
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
-                        <Link to="/Match">Match</Link>
-                        <Link to="/Team">Team</Link>
+                        <Link to="/match">Match</Link>
+                        <Link to="/team">Team</Link>
                     </li>
                 </ul>
             </header>

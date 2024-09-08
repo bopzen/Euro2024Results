@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TeamLineUp from "../team-lineup/TeamLineUp";
 
 export default function MatchDetails() {
@@ -14,7 +15,7 @@ export default function MatchDetails() {
                         <div className="country-flag-container-big">
                             <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="" className="country-flag-big" />
                         </div>
-                        <p>France </p>
+                        <Link to="/team"><p>France</p></Link>
                     </div>
                     <div className="match-result-big">
                         <p>1 : 2</p>
@@ -23,7 +24,7 @@ export default function MatchDetails() {
                         <div className="country-flag-container-big">
                             <img src="https://www.worldometers.info/img/flags/sp-flag.gif" alt="" className="country-flag-big" />
                         </div>
-                        <p><b>Spain</b></p>
+                        <Link to="/team"><b><p>Spain</p></b></Link>
                     </div>              
                 </div>
                 <h4>Group A</h4>
