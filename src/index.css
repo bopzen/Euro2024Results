@@ -84,8 +84,6 @@ footer {
 	width: 200px;
 }
 
-
-
 .footer-social-links {
 	display: flex;
 	font-size: 30px;
@@ -106,4 +104,68 @@ footer {
 
 .footer-bottom {
 	font-size: 14px;
+}
+
+.group-results-container {
+    display: flex;
+    justify-content: space-between;
+}
+.matches-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-results-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-result-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem;
+    background-color: #eceeef;
+    border: 2px solid #b7bdc7;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(58, 58, 58, 0.25);
+}
+
+.country-flag-container {
+    display: flex;
+    width: 24px;
+}
+
+.country-flag {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.team-container {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.match-teams {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.match-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    font-weight: 800;
+}
+.match-info {
+    font-size: 10px;
 }

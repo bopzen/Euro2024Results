@@ -3,19 +3,25 @@ import MatchResult from "../match-result/MatchResult";
 export default function GroupMatches() {
     return (
         <>
-            <h1>Group A</h1>
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
-            <MatchResult />
+            <div className="group-results-card">
+                <h3>Group A</h3>
+                <div className="matches-container">
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                    <MatchResult />
+                </div>
+            </div>
+
+
 
         </>
     )
