@@ -276,11 +276,30 @@ footer {
 
 .team-lineup-center {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border: 2px solid white;
     border-radius: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.team-lineup-goal-top {
+    position: absolute;
+    width: 160px;
+    height: 70px;
+    border: 2px solid white;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.team-lineup-goal-bottom {
+    position: absolute;
+    width: 160px;
+    height: 70px;
+    border: 2px solid white;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }

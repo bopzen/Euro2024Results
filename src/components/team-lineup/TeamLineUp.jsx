@@ -8,6 +8,10 @@ export default function TeamLineUp() {
                 </div>
                 <div className="team-lineup-center">
                 </div>
+                <div className="team-lineup-goal-top">
+                </div>
+                <div className="team-lineup-goal-bottom">
+                </div>
             </div>
         </>
     )
