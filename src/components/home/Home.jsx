@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getDataFromCSV } from "../../utils/utils";
+import { getAllMatches } from "../../utils/utils";
 
 import GroupMatches from "../group-matches/GroupMatches";
 import MatchResult from "../match-result/MatchResult";
@@ -10,19 +10,25 @@ export default function Home() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getDataFromCSV('/data/matches.csv'); 
+            const data = await getAllMatches();
             setMatches(data);
-            console.log('CSV Data:', data);
           };
       
           fetchData();
     }, []);
 
-
-
     return (
         <>
-            <p>{ matches}</p>
+            {matches.map((match) => (
+                        <li key={match.matchID}>
+                            <p>{match.ATeam}</p>
+                            <p>{match.BTeam}</p>
+                            <p>{match.ATeamScore}</p>
+                            <p>{match.BTeamScore}</p>
+                            <p>{match.MatchDate}</p>
+                        </li>
+                    ))}
+
             <h2>GROUP STAGE</h2>
             <div className="group-results-container">
                 <GroupMatches />
