@@ -11,35 +11,33 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async () => {
             const data = await getAllMatches();
+            console.log(data)
             setMatches(data);
           };
       
           fetchData();
     }, []);
 
+    function filterMatchesByGroup(group) {
+        console.log()
+        return matches.filter(
+            (match) => match.ATeamGroup == group && match.BTeamGroup == group
+        )
+    }
+
     return (
         <>
-            {matches.map((match) => (
-                        <li key={match.matchID}>
-                            <p>{match.ATeam}</p>
-                            <p>{match.BTeam}</p>
-                            <p>{match.ATeamScore}</p>
-                            <p>{match.BTeamScore}</p>
-                            <p>{match.MatchDate}</p>
-                        </li>
-                    ))}
-
             <h2>GROUP STAGE</h2>
             <div className="group-results-container">
-                <GroupMatches />
-                <GroupMatches />
-                <GroupMatches />
-                <GroupMatches />
-                <GroupMatches />
-                <GroupMatches />
+                <GroupMatches group="A" matches={filterMatchesByGroup("A")}/>
+                <GroupMatches group="B" matches={filterMatchesByGroup("B")}/>
+                <GroupMatches group="C" matches={filterMatchesByGroup("C")}/>
+                <GroupMatches group="D" matches={filterMatchesByGroup("D")}/>
+                <GroupMatches group="E" matches={filterMatchesByGroup("E")}/>
+                <GroupMatches group="F" matches={filterMatchesByGroup("F")}/>
             </div>
             
-            <h2>ROUND OF 16</h2>
+{/*            <h2>ROUND OF 16</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
@@ -65,7 +63,7 @@ export default function Home() {
             <h2>FINAL</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
-            </div>
+            </div> */}
         </>
     )
 }

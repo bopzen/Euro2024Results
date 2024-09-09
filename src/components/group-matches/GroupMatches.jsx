@@ -1,24 +1,28 @@
 import { Link } from "react-router-dom";
 import MatchResult from "../match-result/MatchResult";
 
-export default function GroupMatches() {
+export default function GroupMatches(
+    { group, matches }
+) {
+    console.log(matches)
     return (
         <>
             <div className="group-results-card">
-                <h3>Group A</h3>
+                <h3>Group {group}</h3>
                 <div className="matches-container">
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
-                    <Link to="/match"><MatchResult /></Link>
+
+                    {matches.map(
+                        (match) => (
+                            <Link 
+                                to={`/match/`} 
+                                key={match.matchID} 
+                                className="match-link"
+                            >
+                                <MatchResult 
+                                    match={match}
+                                />
+                            </Link>
+                    ))}
                 </div>
             </div>
 
