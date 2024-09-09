@@ -5,7 +5,7 @@ import MatchResult from "../match-result/MatchResult";
 export default function Home() {
     return (
         <>
-            <h2>Group Stage</h2>
+            <h2>GROUP STAGE</h2>
             <div className="group-results-container">
                 <GroupMatches />
                 <GroupMatches />
@@ -15,7 +15,7 @@ export default function Home() {
                 <GroupMatches />
             </div>
             
-            <h2>Round of 16</h2>
+            <h2>ROUND OF 16</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
@@ -26,19 +26,19 @@ export default function Home() {
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
             </div>
-            <h2>Quarter-finals</h2>
+            <h2>QUARTER-FINALS</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
             </div>
-            <h2>Semi-finals</h2>
+            <h2>SEMI-FINALS</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
                 <Link to="/match"><MatchResult /></Link>
             </div>
-            <h2>Final</h2>
+            <h2>FINAL</h2>
             <div className="final-results-container">
                 <Link to="/match"><MatchResult /></Link>
             </div>
