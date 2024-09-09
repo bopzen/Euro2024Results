@@ -19,9 +19,13 @@ export default function Home() {
     }, []);
 
     function filterMatchesByGroup(group) {
-        console.log()
         return matches.filter(
             (match) => match.ATeamGroup == group && match.BTeamGroup == group
+        )
+    }
+    function filterFinalsMatches(startId, endId) {
+        return matches.filter(
+            (match) => match.matchId >= startId && match.matchId <= endId
         )
     }
 

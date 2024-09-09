@@ -1,5 +1,3 @@
-import TeamDetails from "../components/team-details/TeamDetails";
-
 export async function getDataFromCSV(filepath) {
     try {
         const response = await fetch(filepath);
