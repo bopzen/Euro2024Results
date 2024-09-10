@@ -16,6 +16,9 @@ export default function TeamLineUp(
           fetchData();
     }, [matchID, teamID]);
 
+    const teamLineUp = matchLineUp.filter(player => player.TeamID === teamID);
+    console.log(teamLineUp)
+
     if (!matchLineUp) {
         return <p>Loading match details...</p>;
     }
@@ -36,6 +39,15 @@ export default function TeamLineUp(
                 <div className="team-lineup-goal-bottom">
                 </div>
             </div>
+
+            <div>
+            {teamLineUp.map(player => (
+                    <div key={player.PlayerID} className="player">
+                        {player.PlayerName} {player.PlayerPosition}
+                    </div>
+                ))}
+            </div>
+
         </>
     )
 }

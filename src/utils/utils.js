@@ -102,7 +102,8 @@ export async function getMatchLineUpById(matchId) {
             playerObject['MatchID'] = Number(row[2]);
             playerObject['PlayerID'] = Number(row[1]);
             playerObject['PlayerName'] = allPlayersRawData[Number(row[1])][3];
-            playerObject['TeamID'] = allPlayersRawData[Number(row[1])][4];
+            playerObject['PlayerPosition'] = allPlayersRawData[Number(row[1])][2];
+            playerObject['TeamID'] = Number(allPlayersRawData[Number(row[1])][4]);
             playerObject['FromMinutes'] = Number(row[3]);
             playerObject['ToMinutes'] = Number(row[4]);
             matchLineUp.push(playerObject);
