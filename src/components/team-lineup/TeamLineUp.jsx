@@ -1,4 +1,27 @@
-export default function TeamLineUp() {
+import { useEffect, useState } from "react";
+import { getMatchLineUpById } from "../../utils/utils";
+
+export default function TeamLineUp(
+    { matchID, teamID }
+) {
+
+    const [matchLineUp, setMatchLineUp] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await getMatchLineUpById(matchID);
+            setMatchLineUp(data);
+          };
+      
+          fetchData();
+    }, [matchID, teamID]);
+
+    if (!matchLineUp) {
+        return <p>Loading match details...</p>;
+    }
+    console.log(matchID)
+    console.log(teamID)
+    console.log(matchLineUp)
     return (
         <>
             <div className="team-lineup-container">

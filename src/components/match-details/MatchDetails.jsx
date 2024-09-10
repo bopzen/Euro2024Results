@@ -50,8 +50,8 @@ export default function MatchDetails() {
                 </div>
                 <h4>{stage}</h4>
                 <div className="teams-lineup-section">
-                    <TeamLineUp />
-                    <TeamLineUp />
+                    <TeamLineUp matchID={match.matchID} teamID={match.ATeamID}/>
+                    <TeamLineUp matchID={match.matchID} teamID={match.BTeamID} />
                 </div>
             </div>        
         </>

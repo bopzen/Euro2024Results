@@ -78,7 +78,6 @@ export async function getPlayersByTeamId(id) {
     
     for (let i = 1; i < allTeamPlayers.length-1; i++) {
         let row = allTeamPlayers[i];
-        console.log(row)
         let playerObject = {};
         if (row[4] == id) {
             playerObject['PlayerID'] = row[0];
@@ -90,4 +89,25 @@ export async function getPlayersByTeamId(id) {
     }
 
     return teamPlayers;
+}
+
+export async function getMatchLineUpById(matchId) {
+    const allRecordsRawData = await getDataFromCSV('/data/records.csv');
+    const allPlayersRawData = await getDataFromCSV('/data/players.csv');
+    let matchLineUp = [];
+    for (let i = 1; i < allRecordsRawData.length-1; i++) {
+        let row = allRecordsRawData[i];
+        let playerObject = {};
+        if (row[2] == matchId) {
+            playerObject['MatchID'] = Number(row[2]);
+            playerObject['PlayerID'] = Number(row[1]);
+            playerObject['PlayerName'] = allPlayersRawData[Number(row[1])][3];
+            playerObject['TeamID'] = allPlayersRawData[Number(row[1])][4];
+            playerObject['FromMinutes'] = Number(row[3]);
+            playerObject['ToMinutes'] = Number(row[4]);
+            matchLineUp.push(playerObject);
+        }
+
+    }
+    return matchLineUp
 }
