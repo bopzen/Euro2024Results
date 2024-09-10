@@ -13,7 +13,7 @@ export default function GroupMatches(
                     {matches.map(
                         (match) => (
                             <Link 
-                                to={`/match/`} 
+                                to={`/match/${match.matchID}`} 
                                 key={match.matchID} 
                                 className="match-link"
                             >
@@ -24,9 +24,6 @@ export default function GroupMatches(
                     ))}
                 </div>
             </div>
-
-
-
         </>
     )
 }

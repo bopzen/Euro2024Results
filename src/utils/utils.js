@@ -30,3 +30,11 @@ export async function getAllMatches() {
     }
     return allMatches
 }
+
+export async function getMatchById(id) {
+    const allMatches = await getAllMatches();
+    const match = allMatches.find(
+        (match) => match.matchID == id
+    )
+    return match
+}

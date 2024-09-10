@@ -227,7 +227,8 @@ footer {
 }
 .country-flag-container-big {
     display: flex;
-    width: 64px;
+    width: 72px;
+    height: 54px;
 }
 
 .country-flag-big {

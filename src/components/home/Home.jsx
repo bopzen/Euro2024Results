@@ -44,7 +44,7 @@ export default function Home() {
             <h2>ROUND OF 16</h2>
             <div className="final-results-container">
                 {filterFinalsMatches(37, 44).map((match) => (
-                    <Link to={`/match/`} key={match.matchID}>
+                    <Link to={`/match/${match.matchID}`} key={match.matchID}>
                         <MatchResult match={match} />
                     </Link>
                 ))}
@@ -53,7 +53,7 @@ export default function Home() {
             <h2>QUARTER-FINALS</h2>
             <div className="final-results-container">
                 {filterFinalsMatches(45, 48).map((match) => (
-                    <Link to={`/match/`} key={match.matchID}>
+                    <Link to={`/match/${match.matchID}`} key={match.matchID}>
                         <MatchResult match={match} />
                     </Link>
                 ))}
@@ -62,7 +62,7 @@ export default function Home() {
             <h2>SEMI-FINALS</h2>
             <div className="final-results-container">
                 {filterFinalsMatches(49, 50).map((match) => (
-                    <Link to={`/match/`} key={match.matchID}>
+                    <Link to={`/match/${match.matchID}`} key={match.matchID}>
                         <MatchResult match={match} />
                     </Link>
                 ))}
@@ -71,7 +71,7 @@ export default function Home() {
             <h2>FINAL</h2>
             <div className="final-results-container">
                 {filterFinalsMatches(51, 51).map((match) => (
-                    <Link to={`/match/`} key={match.matchID}>
+                    <Link to={`/match/${match.matchID}`} key={match.matchID}>
                         <MatchResult match={match} />
                     </Link>
                 ))}
