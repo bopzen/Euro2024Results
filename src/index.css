@@ -93,6 +93,7 @@ footer {
 	width: 200px;
 }
 
+
 .footer-social-links {
 	display: flex;
 	font-size: 30px;
@@ -112,7 +113,9 @@ footer {
 }
 
 .footer-bottom {
+    padding-top: 0.5rem;
 	font-size: 14px;
+    font-weight: 600;
 }
 
 .group-results-container {
@@ -160,9 +163,14 @@ footer {
 }
 .match-results-right {
     display: flex;
+    width: 50px;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+}
+.match-info {
+    width: 10px;
+
 }
 
 .country-flag-container {
