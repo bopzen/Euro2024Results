@@ -36,7 +36,7 @@ export default function MatchDetails() {
                         <div className="country-flag-container-big">
                             <img src={`/flags/${match.ATeam}.png`} alt="country-flag" className="country-flag-big" />
                         </div>
-                        <Link to="/team"><p>{match.ATeam}</p></Link>
+                        <Link to={`/team/${match.ATeamID}`}><p>{match.ATeam}</p></Link>
                     </div>
                     <div className="match-result-big">
                         <p>{match.ATeamScore} : {match.BTeamScore}</p>
@@ -45,7 +45,7 @@ export default function MatchDetails() {
                         <div className="country-flag-container-big">
                             <img src={`/flags/${match.BTeam}.png`} alt="country-flag" className="country-flag-big" />
                         </div>
-                        <Link to="/team"><p>{match.BTeam}</p></Link>
+                        <Link to={`/team/${match.BTeamID}`}><p>{match.BTeam}</p></Link>
                     </div>              
                 </div>
                 <h4>{stage}</h4>

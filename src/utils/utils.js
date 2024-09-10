@@ -19,8 +19,10 @@ export async function getAllMatches() {
         let row = allMatchesRawData[i];
         let matchObject = {};
         matchObject['matchID'] = Number(row[0]);
+        matchObject['ATeamID'] = Number(row[1]);
         matchObject['ATeam'] = allTeamsRawData[row[1]] ? allTeamsRawData[row[1]][1] : 'N/A';
         matchObject['ATeamGroup'] = allTeamsRawData[row[1]] ? allTeamsRawData[row[1]][3] : 'N/A';
+        matchObject['BTeamID'] = Number(row[2]);
         matchObject['BTeam'] = allTeamsRawData[row[2]] ? allTeamsRawData[row[2]][1] : 'N/A';
         matchObject['BTeamGroup'] = allTeamsRawData[row[2]] ? allTeamsRawData[row[2]][3] : 'N/A';
         matchObject['ATeamScore'] = row[4] ? row[4].split('-')[0] : 'N/A';
@@ -57,5 +59,4 @@ export async function getMatchStageById(id) {
     if (match.matchID == 51) {
         return 'FINAL'
     }
-
 }

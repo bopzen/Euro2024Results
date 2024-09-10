@@ -16,7 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="/match/:matchID" element={<MatchDetails />}/>
-                    <Route path="/team/:id" element={<TeamDetails />}/>
+                    <Route path="/team/:teamID" element={<TeamDetails />}/>
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
             </main>

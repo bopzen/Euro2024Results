@@ -1,4 +1,8 @@
+import { useParams } from "react-router-dom";
+
 export default function TeamDetails() {
+    const {teamID} = useParams();
+
     return (
         <>
             <div className="team-details-section">
