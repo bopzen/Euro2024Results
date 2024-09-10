@@ -11,7 +11,6 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async () => {
             const data = await getAllMatches();
-            console.log(data)
             setMatches(data);
           };
       
@@ -21,12 +20,13 @@ export default function Home() {
     function filterMatchesByGroup(group) {
         return matches.filter(
             (match) => match.ATeamGroup == group && match.BTeamGroup == group
-        )
+        );
     }
     function filterFinalsMatches(startId, endId) {
-        return matches.filter(
-            (match) => match.matchId >= startId && match.matchId <= endId
-        )
+        let finalMatches = matches.filter(
+            (match) => match.matchID >= startId && match.matchID <= endId
+        );
+        return finalMatches;
     }
 
     return (
@@ -41,33 +41,41 @@ export default function Home() {
                 <GroupMatches group="F" matches={filterMatchesByGroup("F")}/>
             </div>
             
-{/*            <h2>ROUND OF 16</h2>
+            <h2>ROUND OF 16</h2>
             <div className="final-results-container">
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
+                {filterFinalsMatches(37, 44).map((match) => (
+                    <Link to={`/match/`} key={match.matchID}>
+                        <MatchResult match={match} />
+                    </Link>
+                ))}
             </div>
+
             <h2>QUARTER-FINALS</h2>
             <div className="final-results-container">
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
+                {filterFinalsMatches(45, 48).map((match) => (
+                    <Link to={`/match/`} key={match.matchID}>
+                        <MatchResult match={match} />
+                    </Link>
+                ))}
             </div>
+
             <h2>SEMI-FINALS</h2>
             <div className="final-results-container">
-                <Link to="/match"><MatchResult /></Link>
-                <Link to="/match"><MatchResult /></Link>
+                {filterFinalsMatches(49, 50).map((match) => (
+                    <Link to={`/match/`} key={match.matchID}>
+                        <MatchResult match={match} />
+                    </Link>
+                ))}
             </div>
+
             <h2>FINAL</h2>
             <div className="final-results-container">
-                <Link to="/match"><MatchResult /></Link>
-            </div> */}
+                {filterFinalsMatches(51, 51).map((match) => (
+                    <Link to={`/match/`} key={match.matchID}>
+                        <MatchResult match={match} />
+                    </Link>
+                ))}
+            </div>
         </>
     )
 }

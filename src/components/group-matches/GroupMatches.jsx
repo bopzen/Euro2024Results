@@ -4,7 +4,6 @@ import MatchResult from "../match-result/MatchResult";
 export default function GroupMatches(
     { group, matches }
 ) {
-    console.log(matches)
     return (
         <>
             <div className="group-results-card">
