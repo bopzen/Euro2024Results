@@ -60,3 +60,13 @@ export async function getMatchStageById(id) {
         return 'FINAL'
     }
 }
+
+export async function getTeamById(id) {
+    const allTeamsRawData = await getDataFromCSV('/data/teams.csv');
+    let teamObject = {};
+    teamObject['teamID'] = allTeamsRawData[id][0];
+    teamObject['Name'] = allTeamsRawData[id][1];
+    teamObject['Manager'] = allTeamsRawData[id][2];
+    teamObject['Group'] = allTeamsRawData[id][3];
+    return teamObject;
+}
