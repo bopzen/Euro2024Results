@@ -19,6 +19,13 @@ export default function MatchDetails() {
           fetchData();
     }, [matchID]);
 
+    const date = new Date(match?.MatchDate);
+    const formattedDate = date.toLocaleDateString('en-UK', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    });
+
     if (!match) {
         return <p>Loading match details...</p>;
     }
@@ -28,7 +35,7 @@ export default function MatchDetails() {
             <div className="match-details-section">
                 <div className="match-details-header">
                     <h3>UEFA Euro 2024</h3>
-                    <h3>{match.MatchDate}</h3>
+                    <h3>{formattedDate}</h3>
                     <h3>Full-time</h3>
                 </div>
                 <div className="match-details-result-big">
@@ -48,7 +55,7 @@ export default function MatchDetails() {
                         <Link to={`/team/${match.BTeamID}`}><p>{match.BTeam}</p></Link>
                     </div>              
                 </div>
-                <h4>{stage}</h4>
+                <h2>{stage}</h2>
                 <div className="teams-lineup-section">
                     <TeamLineUp matchID={match.matchID} teamID={match.ATeamID} color="blue" />
                     <TeamLineUp matchID={match.matchID} teamID={match.BTeamID} color="red" />

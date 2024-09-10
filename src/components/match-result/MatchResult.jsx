@@ -3,7 +3,7 @@ export default function MatchResult(
 ) {
 
     const date = new Date(match.MatchDate);
-    const formattedDate = date.toLocaleDateString('en-US', {
+    const formattedDate = date.toLocaleDateString('en-UK', {
         month: 'short',
         day: 'numeric',
     });
