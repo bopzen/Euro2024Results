@@ -38,3 +38,24 @@ export async function getMatchById(id) {
     )
     return match
 }
+
+export async function getMatchStageById(id) {
+    const match = await getMatchById(id);
+
+    if (match.ATeamGroup == match.BTeamGroup) {
+        return `Group ${match.ATeamGroup}`
+    }
+    if (match.matchID >= 37 && match.matchID <= 44) {
+        return 'ROUND OF 16'
+    }
+    if (match.matchID >= 45 && match.matchID <= 48) {
+        return 'QUARTER-FINALS'
+    }
+    if (match.matchID >= 49 && match.matchID <= 50) {
+        return 'SEMI-FINALS'
+    }
+    if (match.matchID == 51) {
+        return 'FINAL'
+    }
+
+}

@@ -1,22 +1,24 @@
 import { Link, useParams } from "react-router-dom";
 import TeamLineUp from "../team-lineup/TeamLineUp";
 import { useEffect, useState } from "react";
-import { getMatchById } from "../../utils/utils";
+import { getMatchById, getMatchStageById } from "../../utils/utils";
 
 export default function MatchDetails() {
     const {matchID} = useParams();
     const [match, setMatch] = useState(null);
+    const [stage, setStage] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             const data = await getMatchById(matchID);
+            const stage = await getMatchStageById(matchID);
             setMatch(data);
+            setStage(stage);
           };
       
           fetchData();
     }, [matchID]);
 
-    console.log(match)
     if (!match) {
         return <p>Loading match details...</p>;
     }
@@ -46,14 +48,12 @@ export default function MatchDetails() {
                         <Link to="/team"><p>{match.BTeam}</p></Link>
                     </div>              
                 </div>
-                <h4>Group A</h4>
+                <h4>{stage}</h4>
                 <div className="teams-lineup-section">
                     <TeamLineUp />
                     <TeamLineUp />
                 </div>
-            </div>
-            
-            
+            </div>        
         </>
     )
 }
