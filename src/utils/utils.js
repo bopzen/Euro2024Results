@@ -70,3 +70,24 @@ export async function getTeamById(id) {
     teamObject['Group'] = allTeamsRawData[id][3];
     return teamObject;
 }
+
+export async function getPlayersByTeamId(id) {
+    const allTeamPlayers = await getDataFromCSV('/data/players.csv');
+    
+    let teamPlayers = [];
+    
+    for (let i = 1; i < allTeamPlayers.length-1; i++) {
+        let row = allTeamPlayers[i];
+        console.log(row)
+        let playerObject = {};
+        if (row[4] == id) {
+            playerObject['PlayerID'] = row[0];
+            playerObject['TeamNumber'] = row[1];
+            playerObject['Position'] = row[2];
+            playerObject['FullName'] = row[3];
+            teamPlayers.push(playerObject);
+        }       
+    }
+
+    return teamPlayers;
+}
