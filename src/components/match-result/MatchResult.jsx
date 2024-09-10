@@ -14,13 +14,13 @@ export default function MatchResult(
                 <div className="match-teams">
                     <div className="team-container">
                         <div className="country-flag-container">
-                            <img src="https://www.worldometers.info/img/flags/fr-flag.gif" alt="" className="country-flag" />
+                            <img src={`/flags/${match.ATeam}.png`} alt="" className="country-flag" />
                         </div>
                         <p>{match.ATeam}</p>
                     </div>
                     <div className="team-container">
                         <div className="country-flag-container">
-                            <img src="https://www.worldometers.info/img/flags/sp-flag.gif" alt="" className="country-flag" />
+                            <img src={`/flags/${match.BTeam}.png`} alt="" className="country-flag" />
                         </div>
                         <p>{match.BTeam}</p>
                     </div>              
