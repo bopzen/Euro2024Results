@@ -31,7 +31,7 @@ export async function getAllMatches() {
         matchObject['MatchDate'] = row[3] ? row[3] : 'N/A';
         allMatches.push(matchObject);
     }
-    console.log(matches);
+    console.log(allMatches);
     return allMatches
 }
 

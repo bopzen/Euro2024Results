@@ -11,12 +11,14 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async () => {
             const data = await getAllMatches();
+            console.log('Fetched data:' + data);
             setMatches(data);
+            console.log('State1:' + matches);
           };
       
           fetchData();
     }, []);
-    console.log('state:' + matches);
+    console.log('State2:' + matches);
 
     function filterMatchesByGroup(group) {
         return matches.filter(
