@@ -50,6 +50,9 @@ header {
     padding: 1rem;
     box-shadow: 4px 10px 26px 4px rgba(164, 164, 164, 0.25); 
 }
+header>h2 {
+    text-align: center;
+}
 
 .euro-logo-container {
     width: 360px;
@@ -89,7 +92,6 @@ footer {
 .footer-logo img {
 	width: 200px;
 }
-
 
 .footer-social-links {
 	display: flex;
@@ -231,8 +233,8 @@ footer {
     gap: 8rem;
     margin: 2rem 1rem 1rem 1rem;
     font-size: 2.5rem;
-
 }
+
 .country-flag-container-big {
     display: flex;
     width: 72px;
@@ -410,7 +412,7 @@ footer {
 }
 
 .roster-table {
-    width: 40%;
+    width: 600px;
     text-align: center;
     font-weight: 600;
     padding: 1rem;
@@ -490,6 +492,110 @@ table td {
     width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .group-results-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+}
 
+@media (max-width: 1000px) {
+    .match-details-header {
+        gap: 8rem;
+    }
+    .match-details-result-big {
+        gap: 2rem;
+    }
+    .teams-lineup-section {
+        gap: 2rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .group-results-container {
+        width: 100%;
+    }
+    .match-details-header {
+        gap: 4rem;
+    }
+    .match-details-result-big {
+        gap: 1rem;
+        margin: 2rem 0.5rem 1rem 0.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .match-result-big {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .teams-lineup-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .roster-table {
+        width: 500px;
+    }
+    .team-details-header {
+        font-size: 1.4rem;
+    }
+    .footer-main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .match-details-header {
+        gap: 1rem;
+    }
+    .match-details-result-big {
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    .match-result-big {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .teams-lineup-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .roster-table {
+        width: 400px;
+    }
+    .footer-bottom p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .match-details-header {
+        font-size: 0.9rem;
+        gap: 1rem;
+    }
+    .match-details-result-big {
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .match-result-big {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .teams-lineup-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .roster-table {
+        width: 350px;
+    }
 }
