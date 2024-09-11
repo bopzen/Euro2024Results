@@ -16,6 +16,7 @@ export default function Home() {
       
           fetchData();
     }, []);
+    console.log('state:' + matches);
 
     function filterMatchesByGroup(group) {
         return matches.filter(

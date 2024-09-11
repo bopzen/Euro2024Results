@@ -3,6 +3,7 @@ export async function getDataFromCSV(filepath) {
         const response = await fetch(filepath);
         const data = await response.text();
         const rows = data.split('\r\n');
+        console.log('Fetched data: ' + rows);
         return rows.map(row => row.split(','));
     } catch (error) {
         console.log(error)
@@ -30,6 +31,7 @@ export async function getAllMatches() {
         matchObject['MatchDate'] = row[3] ? row[3] : 'N/A';
         allMatches.push(matchObject);
     }
+    console.log(matches);
     return allMatches
 }
 
