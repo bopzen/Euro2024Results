@@ -12,7 +12,9 @@ export async function getDataFromCSV(filepath) {
 
 export async function getAllMatches() {
     const allMatchesRawData = await getDataFromCSV('/data/matches.csv');
-    const allTeamsRawData = await getDataFromCSV('/data/teams.csv');
+    const console.log('Fetched data:' + data); = await getDataFromCSV('/data/teams.csv');
+    console.log(allMatchesRawData)
+    console.log(console.log('Fetched data:' + data);)
 
     let allMatches = [];
 
