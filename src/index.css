@@ -480,3 +480,15 @@ table td {
     font-size: 0.8rem;
     background-color: rgb(88, 170, 88);
 }
+
+.not-found-contaienr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.goal-image-container {
+    width: 30%;
+}
+.goal-image-container img {
+    width: 100%;
+}
