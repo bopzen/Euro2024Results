@@ -2,6 +2,10 @@
 
 # This is my final exam defense project for Sirma Academy JS Front-End 2024 course.
 
+**The project is deployed Render.com and you can access it from the following link:**
+
+### https://euro2024results.onrender.com/
+
 #### **Euro2024Results** is a web application developed with React. The main purpose of the application is to show the UEFA European Football Championship 2024 match results, match details with teams lineup and team details with roster.
 
 ## Short Functionality Description:
