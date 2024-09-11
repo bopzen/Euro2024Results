@@ -10,8 +10,8 @@ export async function getDataFromCSV(filepath) {
 }
 
 export async function getAllMatches() {
-    const allMatchesRawData = await getDataFromCSV('/data/matches.csv');
-    const allTeamsRawData = await getDataFromCSV('/data/teams.csv');
+    const allMatchesRawData = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/matches.csv`);
+    const allTeamsRawData = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/teams.csv`);
 
     let allMatches = [];
 
@@ -62,7 +62,7 @@ export async function getMatchStageById(id) {
 }
 
 export async function getTeamById(id) {
-    const allTeamsRawData = await getDataFromCSV('/data/teams.csv');
+    const allTeamsRawData = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/teams.csv`);
     let teamObject = {};
     teamObject['teamID'] = allTeamsRawData[id][0];
     teamObject['Name'] = allTeamsRawData[id][1];
@@ -72,7 +72,7 @@ export async function getTeamById(id) {
 }
 
 export async function getPlayersByTeamId(id) {
-    const allTeamPlayers = await getDataFromCSV('/data/players.csv');
+    const allTeamPlayers = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/players.csv`);
     
     let teamPlayers = [];
     
@@ -92,8 +92,8 @@ export async function getPlayersByTeamId(id) {
 }
 
 export async function getMatchLineUpById(matchId) {
-    const allRecordsRawData = await getDataFromCSV('/data/records.csv');
-    const allPlayersRawData = await getDataFromCSV('/data/players.csv');
+    const allRecordsRawData = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/records.csv`);
+    const allPlayersRawData = await getDataFromCSV(`${process.env.PUBLIC_URL}/data/players.csv`);
     let matchLineUp = [];
     for (let i = 1; i < allRecordsRawData.length-1; i++) {
         let row = allRecordsRawData[i];
