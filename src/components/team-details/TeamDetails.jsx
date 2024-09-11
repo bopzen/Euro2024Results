@@ -26,8 +26,6 @@ export default function TeamDetails() {
         return <p>Loading team details...</p>;
     }
 
-    console.log(players)
-
     function getPositionClass(position) {
         return position.toLowerCase();
     };
