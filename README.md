@@ -20,7 +20,7 @@
 
 ## Main Functionality Description:
 - The website uses basic **CSV** files for data that need to be parsed and the required information needs to be extracted using the relations based on IDs similar to how a relative DB would work `matches.csv`, `players.csv`, `records.csv`, `teams.csv`.
-The requirement doesnt allow to use external parsing libraries, so the main approach I used is to create `utils.js` file in the app with utils functions that read data from CSV file and store it in array, then use other functions that get the raw data and create match, teams, players objects with the needed info based on the relations of the IDs.
+By resuirement the use of external parsing libraries is not allowed, so the main approach used here is to create `utils.js` file in the app with utils functions that read the raw data from CSV file and store it in array, then use other functions that get the raw data and create match, teams, players objects populated with the needed info based on the relations of the IDs.
 
 
 
@@ -44,15 +44,14 @@ The requirement doesnt allow to use external parsing libraries, so the main appr
 
 ## Screenshots of the web application:
 
-- Home page:
+- **Home page:**
 ![alt text](Screenshot_Home.png)
 
-- Match details page:
+- **Match details page:**
 ![alt text](Screenshot_MatchDetails.png)
 
-- Team details page:
+- **Team details page:**
 ![alt text](Screenshot_TeamDetails.png)
 
-
-- Responsive Design:
+- **Responsive Design:**
 ![alt text](Screenshot_Responsive.png)
