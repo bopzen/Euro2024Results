@@ -2,8 +2,7 @@ export async function getDataFromCSV(filepath) {
     try {
         const response = await fetch(filepath);
         const data = await response.text();
-        const rows = data.split('\n');
-        console.log('Fetched data: ' + rows);
+        const rows = data.split(/\r?\n/);
         return rows.map(row => row.split(','));
     } catch (error) {
         console.log(error)
@@ -13,8 +12,6 @@ export async function getDataFromCSV(filepath) {
 export async function getAllMatches() {
     const allMatchesRawData = await getDataFromCSV('/data/matches.csv');
     const allTeamsRawData = await getDataFromCSV('/data/teams.csv');
-    console.log(allMatchesRawData)
-    console.log(allTeamsRawData)
 
     let allMatches = [];
 
@@ -33,7 +30,6 @@ export async function getAllMatches() {
         matchObject['MatchDate'] = row[3] ? row[3] : 'N/A';
         allMatches.push(matchObject);
     }
-    console.log(allMatches);
     return allMatches
 }
 
